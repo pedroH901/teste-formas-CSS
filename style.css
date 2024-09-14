@@ -1,0 +1,172 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #87CEEB;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+#quadrado, #triangulo, #circulo, #estrela, #coracao, #coracao2, #seta-direita, #ceu, #sol {
+    position: absolute;
+}
+
+#quadrado {
+    width: 100px;
+    height: 100px;
+    background-color: #FF6347;
+    top: 10px;
+    left: 10px;
+}
+
+#triangulo {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #4682B4;
+    top: 10px;
+    left: 150px;
+}
+
+#circulo {
+    width: 100px;
+    height: 100px;
+    background-color: #32CD32; /* Verde limão */
+    border-radius: 50%;
+    top: 10px;
+    left: 290px;
+}
+
+.estrela {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid gold;
+    transform: rotate(35deg);
+    margin: 100px; /* Ajuste conforme necessário */
+}
+
+.estrela:before, .estrela:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid gold;
+}
+
+.estrela:before {
+    transform: rotate(-72deg);
+    top: -50px;
+    left: -50px;
+}
+
+.estrela:after {
+    transform: rotate(72deg);
+    top: -50px;
+    left: -50px;
+}
+
+#coracao {
+    width: 100px;
+    height: 100px;
+    background-color: #FF1493; /* Rosa profundo */
+    position: relative;
+    transform: rotate(-45deg);
+    top: 150px;
+    left: 150px;
+}
+
+#coracao:before, #coracao:after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #FF1493; /* Rosa profundo */
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+}
+
+#coracao:before {
+    left: 50px; /* Ajustado para alinhar corretamente */
+}
+
+#coracao:after {
+    left: -50px; /* Ajustado para alinhar corretamente */
+}
+
+#coracao2 {
+    width: 100px;
+    height: 100px;
+    background-color: #FF1493; /* Rosa profundo */
+    position: relative;
+    transform: rotate(45deg);
+    top: 150px;
+    left: -560px; /* Ajustado para alinhar com #coracao */
+}
+
+#coracao2:before, #coracao2:after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #FF1493; /* Rosa profundo */
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+}
+
+#coracao2:before {
+    left: -50px;
+}
+
+#coracao2:after {
+    left: 50px;
+}
+
+#seta-direita {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 30px solid #000;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#ceu {
+    width: 150px;
+    height: 150px;
+    background-color: #FFD700; /* Ouro */
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    left: 290px;
+}
+
+#sol {
+    width: 80px;
+    height: 80px;
+    background-color: #FF4500; /* Laranja avermelhado */
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+}
